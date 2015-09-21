@@ -1,0 +1,146 @@
+$primary: #303F9F
+$light-primary: #BBDEFB
+$white: #f2f2f2
+$divider: #B6B6B6
+$error: #D32F2F
+
+$borde: 2px
+$font-family: "Roboto"
+
+*
+	margin: 0
+	padding: 0
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body
+	background: $white
+	font-family: $font-family
+	border-top: 30px solid $primary
+
+.wrap
+	width: 90%
+	max-width: 500px
+	padding: 40px
+	margin: auto
+	background: #fff
+	box-shadow: 0px 0px 3px grey
+
+.contenedor-formulario
+	width: 100%
+	color: $white
+	padding: 50px
+	.formulario
+		width: 100%
+		margin: auto
+		.input-group
+			position: relative
+			margin-bottom: 32px
+			// background: rgba(#ccc, .2)
+			input[type="text"],
+			input[type="email"],
+			input[type="password"],
+				font-family: $font-family
+				font-size: 16px
+				color: $primary
+				width: 100%
+				outline: none
+				padding: 15px
+				background: none
+				border: none
+				border-bottom: $borde solid $light-primary
+				&:focus,
+				&:active
+					outline: none
+					border-bottom: $borde solid $primary
+				&.error
+					border-bottom: $borde solid $error
+					+ label
+						color: $error
+			label
+				color: $primary
+				&.label
+					-webkit-transition: all .3s ease
+					-o-transition: all .3s ease
+					transition: all .3s ease
+					margin-left: 15px
+					font-size: 16px
+					line-height: 16px
+					position: absolute
+					top: 16px
+					left: 0
+					&.active
+						top: -12px
+						font-size: 12px
+						line-height: 12px
+						color: $divider
+			&.checkbox label,
+			&.radio label
+				display: inline-block
+				cursor: pointer
+				color: $primary
+				position: relative
+				padding: 5px 15px 5px 51px
+				font-size: 1em
+				border-radius: 3px
+				-webkit-transition: all .3s ease
+				-o-transition: all .3s ease
+				transition: all .3s ease
+				&:hover
+					background: rgba($light-primary, 1)
+				&:before
+					content: ""
+					display: inline-block
+					width: 17px
+					height: 17px
+					position: absolute
+					left: 15px
+					border-radius: 50%
+					background: none
+					border: $borde solid $primary
+			// Clase de error para Checkbox y Radio
+			&.error
+				label
+					color: $error
+					&:hover
+						background: rgba($error, .2)
+					&:before
+						border: $borde solid $error
+			&.radio
+				input[type="radio"]
+					display: none
+					&:checked + label:before
+						display: none
+					&:checked + label
+						padding: 5px 15px
+						background: $primary
+						border-radius: $borde
+						color: $white
+			&.checkbox
+				label:before 
+					border-radius: 3px
+				input[type="checkbox"]
+					display: none
+					&:checked + label:before 
+						display: none
+					&:checked + label
+						background: $primary
+						color: $white
+						padding: 5px 15px
+		input[type="submit"]
+			background: $primary
+			border-radius: 1px
+			border: $borde solid $white
+			color: #fff
+			cursor: pointer
+			display: inline-block
+			font-family: $font-family
+			font-size: 16px
+			padding: 15px
+			width: 100%
+			-webkit-transition: all .3s ease
+			-o-transition: all .3s ease
+			transition: all .3s ease
+			&:hover
+				background: #1976D2
