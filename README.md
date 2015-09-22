@@ -2,7 +2,7 @@
 
 ![Thumb](https://raw.githubusercontent.com/falconmasters/formulario-material-design/master/img/formulario-material-design.png)
 
-Demo: codepen.io/falconmasters/pen/PPzeXN
+Demo: http://www.codepen.io/falconmasters/pen/PPzeXN
 
 ### Tutorial: [http://www.falconmasters.com/](http://www.falconmasters.com)
 
