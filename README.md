@@ -1,6 +1,6 @@
 # Formulario estilo Material Design
 
-![Thumb](https://raw.githubusercontent.com/falconmasters/custom_radio_checkbox/master/img/thumb.jpg)
+![Thumb](https://raw.githubusercontent.com/falconmasters/formulario-material-design/master/img/formulario-material-design.png)
 
 Demo: http://codepen.io/falconmasters/pen/###
 
