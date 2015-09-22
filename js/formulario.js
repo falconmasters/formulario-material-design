@@ -16,10 +16,22 @@ var validarInputs = function(){
 				elementos[i].className = elementos[i].className + " error";
 				return false;
 			} else {
-				elementos[i].className = elementos[i].className.replace(" error", ""); 
+				elementos[i].className = elementos[i].className.replace(" error", "");
 			}
 		}
 	}
+
+	// Comprobando que las contraseñas coincidan
+	if (elementos.pass.value !== elementos.pass2.value) {
+		elementos.pass.value = "";
+		elementos.pass2.value = "";
+		elementos.pass.className = elementos.pass.className + " error";
+		elementos.pass2.className = elementos.pass2.className + " error";
+	} else {
+		elementos.pass.className = elementos.pass.className.replace(" error", "");
+		elementos.pass2.className = elementos.pass2.className.replace(" error", "");
+	}
+
 	return true;
 };
 
@@ -87,10 +99,8 @@ var enviar = function(e){
 		console.log('Falto validar Checkbox');
 		e.preventDefault();
 	} else {
-		// formulario.submit();
 		console.log('Envia');
 		e.preventDefault();
-		return false;
 	}
 };
 
